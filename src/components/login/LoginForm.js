@@ -60,6 +60,18 @@ export default function LoginForm({ setVisible }) {
       </div>
       <div className="login_2">
         <div className="login_2_wrap">
+          <p
+            style={{
+              fontSize: "12px",
+              textAlign: "center",
+              color: "#555",
+              marginBottom: "10px",
+            }}
+          >
+            Test account: Email:{" "}
+            <strong style={{ color: "blue" }}>ahmed@gmail.com</strong>/
+            Password: <strong style={{ color: "blue" }}>Aa123456</strong>
+          </p>
           <Formik
             enableReinitialize
             initialValues={{
@@ -91,7 +103,7 @@ export default function LoginForm({ setVisible }) {
                 ) : (
                   <button type="submit" className="blue_btn">
                     Log In
-                  </button>                
+                  </button>
                 )}
               </Form>
             )}
