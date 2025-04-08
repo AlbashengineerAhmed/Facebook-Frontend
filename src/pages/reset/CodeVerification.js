@@ -21,10 +21,12 @@ export default function CodeVerification({
       .max("5", "Code must be 5 characters."),
   });
   const { email } = userInfos;
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const verifyCode = async () => {
     try {
       setLoading(true);
-      await axios.post(`${process.env.BASE_URL}/validateResetCode`, {
+      await axios.post(`${BASE_URL}/validateResetCode`, {
         email,
         code,
       });

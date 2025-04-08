@@ -1,8 +1,10 @@
 import axios from "axios";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 export const updateprofilePicture = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/updateProfilePicture`,
+      `${BASE_URL}/updateProfilePicture`,
       {
         url,
       },
@@ -20,7 +22,7 @@ export const updateprofilePicture = async (url, token) => {
 export const updateCover = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/updateCover`,
+      `${BASE_URL}/updateCover`,
       {
         url,
       },
@@ -38,7 +40,7 @@ export const updateCover = async (url, token) => {
 export const addFriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/addFriend/${id}`,
+      `${BASE_URL}/addFriend/${id}`,
       {},
 
       {
@@ -55,7 +57,7 @@ export const addFriend = async (id, token) => {
 export const cancelRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/cancelRequest/${id}`,
+      `${BASE_URL}/cancelRequest/${id}`,
       {},
 
       {
@@ -72,7 +74,7 @@ export const cancelRequest = async (id, token) => {
 export const follow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/follow/${id}`,
+      `${BASE_URL}/follow/${id}`,
       {},
 
       {
@@ -90,7 +92,7 @@ export const follow = async (id, token) => {
 export const unfollow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/unfollow/${id}`,
+      `${BASE_URL}/unfollow/${id}`,
       {},
 
       {
@@ -107,7 +109,7 @@ export const unfollow = async (id, token) => {
 export const acceptRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/acceptRequest/${id}`,
+      `${BASE_URL}/acceptRequest/${id}`,
       {},
 
       {
@@ -124,7 +126,7 @@ export const acceptRequest = async (id, token) => {
 export const unfriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/unfriend/${id}`,
+      `${BASE_URL}/unfriend/${id}`,
       {},
 
       {
@@ -141,7 +143,7 @@ export const unfriend = async (id, token) => {
 export const deleteRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/deleteRequest/${id}`,
+      `${BASE_URL}/deleteRequest/${id}`,
       {},
 
       {
@@ -158,7 +160,7 @@ export const deleteRequest = async (id, token) => {
 export const search = async (searchTerm, token) => {
   try {
     const { data } = await axios.post(
-      `${process.env.BASE_URL}/search/${searchTerm}`,
+      `${BASE_URL}/search/${searchTerm}`,
       {},
 
       {
@@ -175,7 +177,7 @@ export const search = async (searchTerm, token) => {
 export const addToSearchHistory = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/addToSearchHistory`,
+      `${BASE_URL}/addToSearchHistory`,
       { searchUser },
 
       {
@@ -192,7 +194,7 @@ export const addToSearchHistory = async (searchUser, token) => {
 export const getSearchHistory = async (token) => {
   try {
     const { data } = await axios.get(
-      `${process.env.BASE_URL}/getSearchHistory`,
+      `${BASE_URL}/getSearchHistory`,
 
       {
         headers: {
@@ -208,7 +210,7 @@ export const getSearchHistory = async (token) => {
 export const removeFromSearch = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.BASE_URL}/removeFromSearch`,
+      `${BASE_URL}/removeFromSearch`,
       { searchUser },
 
       {
@@ -225,7 +227,7 @@ export const removeFromSearch = async (searchUser, token) => {
 export const getFriendsPageInfos = async (token) => {
   try {
     const { data } = await axios.get(
-      `${process.env.BASE_URL}/getFriendsPageInfos`,
+      `${BASE_URL}/getFriendsPageInfos`,
 
       {
         headers: {

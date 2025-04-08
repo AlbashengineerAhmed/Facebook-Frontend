@@ -30,13 +30,14 @@ function App() {
       getAllPosts();
     }
   }, [location.pathname, user]);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const getAllPosts = async () => {
     try {
       dispatch({
         type: "POSTS_REQUEST",
       });
-      const { data } = await axios.get(`${process.env.BASE_URL}/getAllposts`, {
+      const { data } = await axios.get(`${BASE_URL}/getAllposts`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

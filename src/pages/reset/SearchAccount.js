@@ -19,11 +19,13 @@ export default function SearchAccount({
       .email("Must be a valid email address.")
       .max(50, "Email address can't be more than 50 characters."),
   });
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const handleSearch = async () => {
     try {
       setLoading(true);
 
-      const { data } = await axios.post(`${process.env.BASE_URL}/findUser`, {
+      const { data } = await axios.post(`${BASE_URL}/findUser`, {
         email,
       });
       setUserInfos(data);

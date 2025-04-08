@@ -27,7 +27,7 @@ export default function Profile({ getAllPosts }) {
   const { user } = useSelector((state) => ({ ...state }));
   const [photos, setPhotos] = useState({});
   var userName = username === undefined ? user.username : username;
-
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
   const [{ loading, error, profile }, dispatch] = useReducer(profileReducer, {
     loading: false,
     profile: {},
@@ -52,7 +52,7 @@ export default function Profile({ getAllPosts }) {
         type: "PROFILE_REQUEST",
       });
       const { data } = await axios.get(
-        `${process.env.BASE_URL}/getProfile/${userName}`,
+        `${BASE_URL}/getProfile/${userName}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -64,7 +64,7 @@ export default function Profile({ getAllPosts }) {
       } else {
         try {
           const images = await axios.post(
-            `${process.env.BASE_URL}/listImages`,
+            `${BASE_URL}/listImages`,
             { path, sort, max },
             {
               headers: {

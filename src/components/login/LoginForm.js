@@ -32,10 +32,12 @@ export default function LoginForm({ setVisible }) {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const loginSubmit = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.post(`${process.env.BASE_URL}/login`, {
+      const { data } = await axios.post(`${BASE_URL}/login`, {
         email,
         password,
       });

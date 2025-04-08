@@ -58,7 +58,7 @@ This is the frontend of a social media application built using React. The app al
 3. **Set up environment variables**:
    - Create a `.env` file in the root directory and add the following:
    ```bash
-   BASE_URL=http://localhost:8000  # URL of your backend
+   REACT_APP_BASE_URL=http://localhost:8000  # URL of your backend
    ```
 
 4. **Run the frontend**:

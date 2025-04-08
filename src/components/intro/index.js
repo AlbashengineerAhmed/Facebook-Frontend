@@ -27,12 +27,13 @@ export default function Intro({ detailss, visitor, setOthername }) {
   const [infos, setInfos] = useState(initial);
   const [showBio, setShowBio] = useState(false);
   const [max, setMax] = useState(infos?.bio ? 100 - infos?.bio.length : 100);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const updateDetails = async () => {
     try {
       console.log("sent");
       const { data } = await axios.put(
-        `${process.env.BASE_URL}/updateDetails`,
+        `${BASE_URL}/updateDetails`,
         {
           infos,
         },

@@ -74,10 +74,11 @@ export default function RegisterForm({ setVisible }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(true);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const registerSubmit = async () => {
     try {
-      const { data } = await axios.post(`${process.env.BASE_URL}/register`, {
+      const { data } = await axios.post(`${BASE_URL}/register`, {
         first_name,
         last_name,
         email,

@@ -18,6 +18,8 @@ export default function Activate() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const { token } = useParams();
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   useEffect(() => {
     activateAccount();
   }, []);
@@ -25,7 +27,7 @@ export default function Activate() {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `${process.env.BASE_URL}/activate`,
+        `${BASE_URL}/activate`,
         { token },
         {
           headers: {

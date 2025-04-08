@@ -29,10 +29,12 @@ export default function ChangePassword({
       .oneOf([Yup.ref("password")], "Passwords must match."),
   });
   const { email } = userInfos;
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const changePassword = async () => {
     try {
       setLoading(true);
-      await axios.post(`${process.env.BASE_URL}/changePassword`, {
+      await axios.post(`${BASE_URL}/changePassword`, {
         email,
         password,
       });

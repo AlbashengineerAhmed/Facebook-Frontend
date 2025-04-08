@@ -4,10 +4,12 @@ import axios from "axios";
 export default function SendVerification({ user }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   const sendVerificationLink = async () => {
     try {
       const { data } = await axios.post(
-        `${process.env.BASE_URL}/sendVerification`,
+        `${BASE_URL}/sendVerification`,
         {},
         {
           headers: {
