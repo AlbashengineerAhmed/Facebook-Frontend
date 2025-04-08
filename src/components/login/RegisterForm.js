@@ -73,7 +73,7 @@ export default function RegisterForm({ setVisible }) {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   const registerSubmit = async () => {
