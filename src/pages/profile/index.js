@@ -52,7 +52,7 @@ export default function Profile({ getAllPosts }) {
         type: "PROFILE_REQUEST",
       });
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/getProfile/${userName}`,
+        `${process.env.BASE_URL}/getProfile/${userName}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -64,7 +64,7 @@ export default function Profile({ getAllPosts }) {
       } else {
         try {
           const images = await axios.post(
-            `${process.env.REACT_APP_BACKEND_URL}/listImages`,
+            `${process.env.BASE_URL}/listImages`,
             { path, sort, max },
             {
               headers: {

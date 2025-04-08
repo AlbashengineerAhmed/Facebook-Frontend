@@ -32,7 +32,7 @@ export default function Intro({ detailss, visitor, setOthername }) {
     try {
       console.log("sent");
       const { data } = await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/updateDetails`,
+        `${process.env.BASE_URL}/updateDetails`,
         {
           infos,
         },

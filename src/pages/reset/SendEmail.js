@@ -14,10 +14,9 @@ export default function SendEmail({
   const sendEmail = async () => {
     try {
       setLoading(true);
-      await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/sendResetPasswordCode`,
-        { email }
-      );
+      await axios.post(`${process.env.BASE_URL}/sendResetPasswordCode`, {
+        email,
+      });
       setError("");
       setVisible(2);
       setLoading(false);

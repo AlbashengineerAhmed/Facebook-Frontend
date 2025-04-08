@@ -36,14 +36,11 @@ function App() {
       dispatch({
         type: "POSTS_REQUEST",
       });
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/getAllposts`,
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
-      );
+      const { data } = await axios.get(`${process.env.BASE_URL}/getAllposts`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
       dispatch({
         type: "POSTS_SUCCESS",
         payload: data,

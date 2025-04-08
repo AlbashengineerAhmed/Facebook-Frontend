@@ -25,7 +25,7 @@ export default function Activate() {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/activate`,
+        `${process.env.BASE_URL}/activate`,
         { token },
         {
           headers: {
