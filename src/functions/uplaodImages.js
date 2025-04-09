@@ -3,7 +3,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const uplaodImages = async (formData, path, token) => {
   try {
-    const res = await axios.post(
+    const { data } = await axios.post(
       `${BASE_URL}/uploadImages`,
       formData,
       {
@@ -13,7 +13,7 @@ export const uplaodImages = async (formData, path, token) => {
         },
       }
     );
-    return res?.data;
+    return data;
   } catch (error) {
     return error.response.data.message;
   }
