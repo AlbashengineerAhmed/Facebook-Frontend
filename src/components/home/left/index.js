@@ -77,7 +77,7 @@ export default function LeftHome({ user }) {
           name="My Instagram "
         />
       </div>
-      <div className={`fb_copyright ${visible && "relative_fb_copyright"}`}>
+      <div className={`sc_copyright ${visible && "relative_sc_copyright"}`}>
         <Link to="/">Privacy </Link>
         <span>. </span>
         <Link to="/">Terms </Link>
@@ -91,7 +91,7 @@ export default function LeftHome({ user }) {
         <Link to="/"></Link>Cookies <span>. </span>
         <Link to="/">More </Link>
         <span>. </span> <br />
-        Meta © 2022
+        Social Connect © 2025
       </div>
     </div>
   );

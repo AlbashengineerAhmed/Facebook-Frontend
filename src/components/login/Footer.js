@@ -24,16 +24,16 @@ export default function Footer() {
         <Link to="/">Sign Up</Link>
         <Link to="/">Log in</Link>
         <Link to="/">Messenger</Link>
-        <Link to="/">Facebook Lite</Link>
+        <Link to="/">Social Connect Lite</Link>
         <Link to="/">Watch</Link>
         <Link to="/">Places</Link>
         <Link to="/">Games</Link>
         <Link to="/">Marketplace</Link>
-        <Link to="/">Facebook Pay</Link>
-        <Link to="/">Oculus</Link>
+        <Link to="/">Payments</Link>
+        <Link to="/">VR</Link>
         <Link to="/">Portal</Link>
-        <Link to="/">Instagram</Link>
-        <Link to="/">Bulletin</Link>
+        <Link to="/">Photos</Link>
+        <Link to="/">News</Link>
         <Link to="/">Local</Link>
         <Link to="/">Fundraisers</Link>
         <Link to="/">Services</Link>
@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
       <div className="login_footer_wrap">
         <Link to="/" style={{ fontSize: "12px", marginTop: "10px" }}>
-          Meta © 2025
+          Social Connect © 2025
         </Link>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-# Social Media App - Facebook
+# Social Connect - A Social Media App
 
 This is the frontend of a social media application built using React. The app allows users to authenticate, manage their profiles, post content, interact with friends, and more. The frontend communicates with a backend API to perform all these operations. This repository focuses on the UI components, routing, state management, and user interactions.
 
@@ -13,15 +13,15 @@ This is the frontend of a social media application built using React. The app al
 - **Profile Management**:
   - Users can update their profile information, including username, bio, and profile picture.
   - Users can view and edit other users' profiles.
-  
+
 - **Social Interactions**:
   - Users can send and accept friend requests.
   - Users can follow and unfollow other users to receive updates.
-  
+
 - **Post Creation and Management**:
   - Users can create, view, and delete posts on their feed.
   - Posts are fetched from the backend API and displayed on the homepage.
-  
+
 - **Dark Mode**:
   - The app supports both dark and light themes, which can be toggled based on the user’s preference.
 
@@ -96,11 +96,11 @@ The app uses Redux for global state management, where the user authentication st
   - The user logs in by submitting their credentials (username and password) on the login page.
   - The app sends an API request to the backend (via Axios) to authenticate the user and obtain a JWT token.
   - Upon successful authentication, the token is stored in the Redux store and local storage (if needed), allowing the user to remain logged in.
-  
+
 - **Protected Routes**:
   - Some routes (like Profile, Friends, etc.) require the user to be authenticated.
   - The `LoggedInRoutes` component ensures that only authenticated users can access protected routes. If a user is not logged in, they are redirected to the login page.
-  
+
 ### Posts Management
 
 The app communicates with the backend API to fetch, create, and delete posts. The following steps outline the process for post-related actions:
@@ -132,7 +132,7 @@ The app communicates with the backend API to fetch, create, and delete posts. Th
 The app supports dark and light themes, which are toggled based on the user's preference. The app uses a combination of React Context and Redux to manage the theme state.
 
 - The theme is applied globally through CSS classes, and components re-render based on the theme selection.
-  
+
 ## Routes
 
 The frontend uses **React Router** for handling routes:
@@ -141,7 +141,7 @@ The frontend uses **React Router** for handling routes:
   - `/profile`: User profile page.
   - `/friends`: Manage friend requests and connections.
   - `/home`: Home feed where posts are displayed.
-  
+
 - **Public Routes**: These routes are accessible without authentication.
   - `/login`: Login page for the user to authenticate.
   - `/reset`: Password reset page for users to change their password.
